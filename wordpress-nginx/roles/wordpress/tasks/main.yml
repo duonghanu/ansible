@@ -6,6 +6,9 @@
   command: chdir=/srv/ /bin/tar xvf wordpress-{{wp_version}}.tar.gz creates=/svr/wordpress
 
 - name: Add group "wordpress"
+  group: name="wordpress"
+
+- name: Add user "wordpress"
   user: name=wordpress group=wordpress home=/srv/wordpress/
 
 - name: Fetch random salts for WordPress config
