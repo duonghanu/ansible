@@ -3,7 +3,7 @@
   get_url: url=http://wordpress.org/wordpress-{{ wp_version}}.tar.gz dest=/srv/wordpress-{{ wp_version }}.tar.gz sha256sum="{{ wp_sha256sum }}"
 
 - name: Extract archive
-  command: chdir=/srv/ /bin/tar xvf wordpress-{{wp_version}}.tar.gz creates=/svr/wordpress"
+  command: chdir=/srv/ /bin/tar xvf wordpress-{{wp_version}}.tar.gz creates=/svr/wordpress
 
 - name: Add group "wordpress"
   user: name=wordpress group=wordpress home=/srv/wordpress/
